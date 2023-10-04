@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd246ce8-113d-47a3-9475-2c197043a1a4" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicioUnitTest/SalarioClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ejercicioUnitTest/SalarioTest.java" afterDir="false" />
+    <list default="true" id="dd246ce8-113d-47a3-9475-2c197043a1a4" name="Changes" comment="commit 1 examen">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicioMocks/Aerolinea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ejercicioMocksStatic/Aerolinea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ejercicioUnitTest/SalarioClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ejercicioUnitTest/SalarioClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\enriq\Documents\MyDocuments\Universidad\S6\VPSI-QA\repos\PrimerParcial\src\test\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ejercicioMocks" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.SalarioTest">
@@ -152,11 +155,20 @@
       <option name="project" value="LOCAL" />
       <updated>1696424119808</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit 1 examen">
+      <option name="closed" value="true" />
+      <created>1696459013331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696459013331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="commit 1 examen" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 1 examen" />
   </component>
 </project>

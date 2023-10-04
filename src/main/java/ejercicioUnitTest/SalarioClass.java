@@ -11,9 +11,9 @@ public class SalarioClass {
         if (salario <= SALARIO_MINIMO){
             return salario;
         } else if (salario <= 2*SALARIO_MINIMO){
-            return Math.round(salario * 0.95);
+            return Math.round(salario * 95)/100.0;
         } else {
-            return salario * 0.9;
+            return Math.round(salario * 90)/100.0;
         }
     }
 }
