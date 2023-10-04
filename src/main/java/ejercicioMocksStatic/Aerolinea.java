@@ -25,14 +25,14 @@ public class Aerolinea {
 
         String fechaFormat = diaSemana+" "+dia+" "+mesString+" "+gestion;
 
-        if (exitenPasajes(destino, cantidadPasajes)){
+        if (existenPasajes(destino, cantidadPasajes)){
             return "el dia "+fechaFormat+" existen "+cantidadPasajes+" pasajes para "+destino;
         } else {
             return "no existen suficientes pasajes para "+destino;
         }
     }
 
-    public static boolean exitenPasajes(String destino, int cantidad){
+    public static boolean existenPasajes(String destino, int cantidad){
         return false;
     }
 

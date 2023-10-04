@@ -45,6 +45,6 @@ public class SalarioTest {
         SalarioClass slr = new SalarioClass();
         double descuentoActual = slr.calcularDescuento(salario);
 
-        Assertions.assertEquals(descuentoEsperado, descuentoActual);
+        Assertions.assertEquals(descuentoEsperado, descuentoActual, "Error, el resultado no es el esperado");
     }
 }

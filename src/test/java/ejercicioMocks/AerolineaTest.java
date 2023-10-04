@@ -1,5 +1,6 @@
-package ejercicioMocksStatic;
+package ejercicioMocks;
 
+import ejercicioMocks.Aerolinea;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,13 +9,6 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
 public class AerolineaTest {
-    private static MockedStatic<Aerolinea> aerolineaStatic;
-    @BeforeAll
-    public static void setup(){
-        // Create Mock
-        aerolineaStatic = Mockito.mockStatic(Aerolinea.class);
-    }
-
     @ParameterizedTest
     @CsvSource({
             "32,1,2000",
@@ -42,9 +36,11 @@ public class AerolineaTest {
     })
     public void verificarFechasInvalidas(int dia, int mes, int gestion){
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            Aerolinea.reservarVuelo("dddd", 9999, dia, mes, gestion);
+            ejercicioMocksStatic.Aerolinea.reservarVuelo("dddd", 9999, dia, mes, gestion);
         });
     }
+
+    Aerolinea aerolineaMock = Mockito.mock(Aerolinea.class);
 
     @ParameterizedTest
     @CsvSource({
@@ -58,12 +54,15 @@ public class AerolineaTest {
             "Sucre, 100, false, 8,10,2023, Sabado, no existen suficientes pasajes para Sucre",
 
     })
+
     public void verificarReservaVuelo(String destino, int cantidadPasajes, boolean resultadoExistenPasajes,
                                       int dia, int mes, int gestion, String diaSemana, String resultadoEsperado){
-        aerolineaStatic.when(()-> Aerolinea.existenPasajes(destino, cantidadPasajes)).thenReturn(resultadoExistenPasajes);
-        aerolineaStatic.when(()-> Aerolinea.getDay(dia, mes, gestion)).thenReturn(diaSemana);
+        Mockito.when(aerolineaMock.getDay(dia, mes, gestion)).thenReturn(diaSemana);
+        Mockito.when(aerolineaMock.existenPasajes(destino, cantidadPasajes)).thenReturn(resultadoExistenPasajes);
 
-        String actualResult = Aerolinea.reservarVuelo(destino, cantidadPasajes, dia, mes, gestion);
+        Aerolinea aerolinea = new Aerolinea();
+
+        String actualResult = aerolinea.reservarVuelo(destino, cantidadPasajes, dia, mes, gestion);
 
         Assertions.assertEquals(resultadoEsperado, actualResult, "Error, el resultado no es el esperado");
 
